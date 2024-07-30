@@ -18,12 +18,12 @@ function createBoxes (amaunt) {
   const boxes = [];
 
   for (let index = 0; index < amaunt; index++) {
-    const box = `<div style="background-color:${getRandomHexColor()}" width="${size}px" height="${size}px" `
+    const box = `<div style="width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()};" </div> `
     size +=10;
     boxes.push(box);
   }
 
-  boxContainer.insertAdjacentHTML('biforeend', boxes.join(''));
+  boxContainer.insertAdjacentHTML('beforeend', boxes.join(''));
 }
 
 function destroyBoxes() {
